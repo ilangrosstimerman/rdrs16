@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuPaul's Drag Race Contestants</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+            background-color: #fff;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+
+        th, td {
+            padding: 12px 20px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #000;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #FFC0CB;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #FFA07A;
+        }
+
+        tr:hover {
+            background-color: #FF1493;
+        }
+
+        .red-background {
+            background-color: red;
+            color: white;
+        }
+
+        .yellow-background {
+            background-color: efcc00;
+        }
+
+        .green-background {
+            background-color: green;
+            color: white;
+        }
+/* Add column borders */
+th, td {
+    padding: 12px 20px;
+    text-align: center;
+    border-right: 2px solid #000;
+}
+
+th:last-child, td:last-child {
+    border-right: none; /* Remove right border for the last column */
+}
+/* Add a light border to each row */
+tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4); /* Use rgba with low opacity for a light border */
+}
+/* CSS for mobile responsiveness */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        overflow-x: auto; /* Enable horizontal scrolling */
+    }
+
+    th, td {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
+    .red-background, .yellow-background, .green-background {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Actual</th>
+            <th>Ilan</th>
+            <th>Lauren</th>
+            <th>Nate</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>TBD</td>
+            <td>Nymphia Wind</td>
+            <td>Nymphia Wind</td>
+            <td>Nymphia Wind</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>TBD</td>
+            <td>Plane Jane</td>
+            <td>Q</td>
+            <td>Plane Jane</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>TBD</td>
+            <td>Plasma</td>
+            <td>Sapphira Cristál</td>
+            <td>Q</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>TBD</td>
+            <td>Q</td>
+            <td>Plane Jane</td>
+            <td>Sapphira Cristál</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>TBD</td>
+            <td>Dawn</td>
+            <td>Dawn</td>
+            <td>Dawn</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>TBD</td>
+            <td>Sapphira Cristál</td>
+            <td>Plasma</td>
+            <td>Plasma</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>TBD</td>
+            <td>Morphine Love Dion</td>
+            <td>Xunami Muse</td>
+            <td>Megami</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>TBD</td>
+            <td>Xunami Muse</td>
+            <td>Morphine Love Dion</td>
+            <td>Morphine Love Dion</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>TBD</td>
+            <td>Megami</td>
+            <td>Megami</td>
+            <td>Mhi'ya Iman Le'Paige</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>TBD</td>
+            <td>Mhi'ya Iman Le'Paige</td>
+            <td>Mhi'ya Iman Le'Paige</td>
+            <td>Xunami Muse</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>TBD</td>
+            <td>Geneva Karr</td>
+            <td>Geneva Karr</td>
+            <td>Geneva Karr</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Amanda Tori Meeting</td>
+            <td>Wrong</td>
+            <td>Wrong</td>
+            <td>Wrong</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Mirage</td>
+            <td>Wash</td>
+            <td>Wash</td>
+            <td>Wash</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Hershii LiqCour-Jeté</td>
+            <td>Wash</td>
+            <td>Wash</td>
+            <td>Wash</td>
+        </tr>
+ <script>
+            // JavaScript for conditional formatting
+            document.addEventListener('DOMContentLoaded', function () {
+                const table = document.querySelector('table');
+                const rows = table.querySelectorAll('tr');
+
+                rows.forEach(function (row) {
+                    const cells = row.querySelectorAll('td');
+
+                    cells.forEach(function (cell) {
+                        const cellText = cell.textContent.toLowerCase();
+
+                        if (cellText.includes('wrong')) {
+                            cell.classList.add('red-background');
+                        } else if (cellText.includes('wash')) {
+                            cell.classList.add('yellow-background');
+                        } else if (cellText.includes('correct')) {
+                            cell.classList.add('green-background');
+                        }
+                    });
+                });
+            });
+        </script>
+<script>
+parent.document.getElementsByTagName('iframe')[0].scrolling="no";
+</script>
+    </table>
+</body>
+</html>
+
